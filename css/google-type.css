@@ -1,0 +1,377 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,100,300italic,400italic,700,900,700italic,900italic|Roboto+Slab:100,300,400,100,300,700|Roboto+Condensed:400,300,300italic|Roboto:400,100,300,500,700|Raleway:400,700,500,600,300,200|Lusitana|Ovo|Nixie+One|Libre+Baskerville:400,700,400italic|Yeseva+One|Merriweather:300,400,900,700|Merriweather+Sans:400,300|Playfair+Display:400,900,900italic,400italic,700,700italic|Playfair+Display+SC:400,700,900|Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic|Droid+Serif:400,700|Open+Sans:400,800,300,600,700|Sanchez|Rufina:400,700|Sintony|Oxygen:400,300,700|Noto+Serif:400,700|Noto+Sans:400,700|Vidaloka|Lora:400,700|Quicksand:400,300,700|Abril+Fatface|Josefin+Sans:400,100,300,600,700|Quattrocento:400,700|Quattrocento+Sans:400,700,400italic,700italic|Suranna|Martel:400,800,700,900,600|Martel+Sans:400,600,700,300,200);
+:root {
+  --black: #111111;
+  --white: #fdfdfd;
+  --blueish: #add8e6;
+  --green: #22cc88;
+  --blue: #0055ff;
+  --purple: #8855ff;
+  --purpleSh: #b666d2;
+  --red: #ff0055;
+  --orange: #ee4444;
+  --yellow: #ffcc00;
+  --mustard: #ffaa00;
+  --pink: #ffc1cc;
+  --lili: #b19cd9;
+  --lila: #AE04CC;
+}
+@font-face {
+    font-family: 'salomeregular';
+    src: url(fonts/salome-webfont-webfont.eot);
+    src: url(fonts/salome-webfont-webfont.eot?#iefix) format('embedded-opentype'), url(fonts/salome-webfont-webfont.woff2) format('woff2'), url(fonts/salome-webfont-webfont.woff) format('woff'), url(fonts/salome-webfont-webfont.ttf) format('truetype'), url(fonts/salome-webfont-webfont.svg#salomeregular) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'quartobold';
+    src: url(fonts/quarto-bold-webfont.eot);
+    src: url(fonts/quarto-bold-webfont.eot?#iefix) format('embedded-opentype'), url(fonts/quarto-bold-webfont.woff2) format('woff2'), url(fonts/quarto-bold-webfont.woff) format('woff'), url(fonts/quarto-bold-webfont.ttf) format('truetype'), url(fonts/quarto-bold-webfont.svg#quartobold) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ideal Sans Book';
+    src: url(fonts/IdealSans-Book.eot);
+    src: url(fonts/IdealSans-Book.eot?#iefix) format('embedded-opentype'), url(fonts/IdealSans-Book.woff2) format('woff2'), url(fonts/IdealSans-Book.woff) format('woff'), url(fonts/IdealSans-Book.ttf) format('truetype'), url(fonts/IdealSans-Book.svg#IdealSans-Book) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'First Reign PERSONAL USE ONLY Regular';
+    src: url(fonts/FirstReignPersonalUseOnlyRegular-gxnD1.otf);
+    /* src: url(fonts/IdealSans-Book.eot?#iefix) format('embedded-opentype'), url(fonts/IdealSans-Book.woff2) format('woff2'), url(fonts/IdealSans-Book.woff) format('woff'), url(fonts/IdealSans-Book.ttf) format('truetype'), url(fonts/IdealSans-Book.svg#IdealSans-Book) format('svg'); */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bilbo Hand';
+    src: url(fonts/BilboHandRegular-L3MZ.ttf);
+    /* src: url(fonts/IdealSans-Book.eot?#iefix) format('embedded-opentype'), url(fonts/IdealSans-Book.woff2) format('woff2'), url(fonts/IdealSans-Book.woff) format('woff'), url(fonts/IdealSans-Book.ttf) format('truetype'), url(fonts/IdealSans-Book.svg#IdealSans-Book) format('svg'); */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body { 
+    margin: 0; 
+    padding: 0; 
+    zoom: 1;
+    background-color: black;
+    height: 100vh;
+    margin: 0rem;
+    overflow-x: hidden;  
+}
+h1, h2, p { margin: 0; padding: 0; }
+p { -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; }
+a {text-decoration: none;}
+.black {
+    color: #000;
+    font-weight: 300;
+}
+.black-overlay {
+    background: linear-gradient( rgba(20,20,20, .5), rgba(20,20,20, .5));
+}
+@keyframes rotate {
+    from {
+      rotate: 0deg;
+    }
+    
+    50% {
+      scale: 1 1.5;
+    }
+    
+    to {
+      rotate: 360deg;
+    }
+}
+.site-wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0; 
+}
+
+#blob {
+    background-color: white;
+    height: 30vmax;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    /* background: linear-gradient(to right, aquamarine, mediumpurple, rgb(115, 115, 53), pink); */
+    background: linear-gradient(180deg, var(--purple), var(--blue), var(--blueish), var(--red), var(--purpleSh), var(--orange), var(--black), var(--lila), var(--yellow), var(--lili), var(--green), var(--blue), var(--pink));
+    background-size: 100% 100%;
+    animation: rotate 20s infinite;
+    opacity: 0.8;
+}
+  
+#blur {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    backdrop-filter: blur(12vmax);
+}
+.container { width: 960px; margin: 0 auto; }
+
+.container.intro {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-wrapper {
+    position: relative;
+    width: 900px;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+.site-title {
+    /* margin-top: 70px; */
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #fff;
+}
+.site-title .top {
+    font-size: 30px;
+}
+.site-title .top span {
+    font-size: 40px;
+}
+.site-title .bottom {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 100;
+    color: pink;
+}
+
+.intro-wrapper .colophon {
+    width: 100%;
+    margin: 50px auto;
+    font-size: 14px;
+    color: #bbb;
+}
+    
+.intro-wrapper .colophon a {
+    text-decoration: underline;
+    color: #bbb;
+}
+.intro-wrapper .colophon p {
+    text-align: left;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.3px;
+    margin: 5px auto;
+    line-height: 1.5;
+}
+
+.intro-wrapper .colophon .column1 {
+    display: inline-block;
+    width: 66%;
+    margin: 10px 10px 10px 25px;
+    vertical-align: top;
+}
+.intro-wrapper .colophon .column2 {
+    display: inline-block;
+    width: 25%;
+    margin: 10px;
+    vertical-align: top;
+}
+
+.site-title.section-intro .small {
+    font: 30px/32px 'Playfair Display', Georgia, serif; 
+    letter-spacing: .06em; 
+    margin-left: 30px; 
+    display: block;
+}
+
+.section-gnat-bull {transition: filter 0.5s ease; z-index: 9; position: relative; background: url(https://img.freepik.com/premium-vector/angry-bull-runs-towards-opposite-direction-hand-drawn-sketch-vector-illustration_666729-762.jpg?w=740) no-repeat; background-size: contain; padding: 90px 0 100px;
+    position: relative;
+    overflow: hidden;
+    background-position: right;
+    background-color: white;
+    background-attachment: fixed !important;
+}
+
+.section-gnat-bull:after, .section-prophet:after, .section-brain:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    opacity: 1; /* Initially invisible */
+}
+.section-gnat-bull h2 { font: 70px/68px 'Playfair Display', Georgia, serif; color: #730000; text-transform: uppercase; margin: 0 0 60px 20px;position: relative;z-index: 1; }
+.section-gnat-bull p {font: 16px/30px 'Fauna One', Georgia, serif; max-width: 540px; color: #000; margin: 0 0 12px 20px;position: relative;z-index: 1; }
+.section-gnat-bull .avatar img { margin: 0 0 10px 20px; }
+.section-gnat-bull .caption { margin: 0 0 40px 20px; color: #000; }
+.section-gnat-bull .caption a { color: #686868; }
+.section-gnat-bull .caption a:hover { background-color: #0cf; }
+
+/* .section-two-bags { background: #ddd9d1 url(../images/architecture.png) no-repeat center; background-size: cover; height: 100vh; }
+.section-two-bags h2 { font: 80px/66px 'Fugaz One', serif; text-transform: uppercase; color: #817a74; margin: 0 0 30px 20px; opacity: .6; }
+.section-two-bags h2 i { font-family:'Oleo Script', serif; font-style: normal;}
+.section-two-bags p { font: 17px/28px 'Monda', Arial, sans-serif; color: #817a74; width: 380px; margin-left: 250px; }
+.section-two-bags .caption { color: #999; float: left; width: 200px; margin: 4px 0 20px 20px; }
+.section-two-bags .caption a:last-child { margin-left: 0; }
+.section-two-bags .caption a {
+    font: 14px/16px 'Unica One', Helvetica, Arial, sans-serif;
+    letter-spacing: .1em;
+    color: #999;
+    text-transform: uppercase;
+    text-decoration: none;
+} */
+.container-3 {
+    background: url(../images/photo-12.png) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 700px;
+    padding: 50px 0;
+}
+.container-3 a {
+    color: #000;
+}
+.container-3 h2 {
+    font-family: 'salomeregular';
+    font-size: 50px;
+}
+
+.container-3 p {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 20px;
+    line-height: 2;
+    font-weight: 100;
+    
+}
+
+.container-3 p a {
+    font-weight: 300;
+}
+
+.container-3 .text-wrapper {
+    width: 750px;
+    margin-top: 70px;
+    margin-left: 0px;
+}
+
+.section-prophet {height: 100vh; position: relative;  z-index: 9; transition: filter 0.5s ease; font-family: 'Neuton', serif;line-height: 1.5; background-color: #101010; color: #999; color: rgba(255,255,255,0.75); background-image: url(https://img.freepik.com/premium-vector/praying-hand-illustration_73644-368.jpg?w=740); background-size: contain; background-attachment: fixed; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; -webkit-text-rendering: optimizeLegibility; text-rendering: optimizeLegibility; background-position: left; background-color: white;background-repeat: no-repeat;}
+.section-prophet .container { width: 100%; overflow: hidden; padding: 40px 180px 140px; box-sizing: border-box; }
+.section-prophet .caption { margin-bottom: 40px; margin-left: 0; }
+.section-prophet .caption a {color: #a001ff; font-size: 18px;}
+.section-prophet h2 { font-family: 'Mr De Haviland', cursive; font-size: 80px; font-weight: 300; margin-bottom: 10px; color: #000; }
+.section-prophet p { font-size: 20px; font-weight: 300; color: #000;}
+.section-prophet .col { max-width: 420px; float: right; }
+
+@-webkit-keyframes rotate {
+    from { -webkit-transform: rotate(0deg);  }
+    to { -webkit-transform: rotate(360deg);  }
+}
+.section-astronomer { background: #38202e url(../images/space.jpg) no-repeat; background-size: cover; overflow: hidden; background-size: cover;
+    padding: 90px 0 100px;
+    overflow: hidden;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+.section-astronomer .container { position: relative; }
+.section-astronomer .stars { position: absolute; left: -50%; background: url(../images/stars.png); display: block; width: 1500px; height: 800px; top:0;
+    -webkit-animation-name:             rotate;
+    -webkit-animation-duration:         40s;
+    -webkit-animation-iteration-count:  infinite;
+    -webkit-animation-timing-function: linear;
+    z-index: 100;
+}
+.section-astronomer h2 { font: 50px/50px 'Megrim', Georgia, serif; color: #fff; text-transform: uppercase; margin: 0 auto 40px auto; text-align: center; border-bottom: solid 1px rgba(255, 255, 255, .5); padding-bottom: 40px; width: 80%;}
+.section-astronomer .avatar img { margin: 0 0 10px 20px; position: relative; z-index: 101;}
+.section-astronomer .caption { margin: 0 0 40px 20px; color: #eee; position: relative; z-index: 102;}
+.section-astronomer .caption a { color: #eee; }
+.section-astronomer .caption a:hover { background-color: #e45546; }
+.section-astronomer h2 { font-size: 46px; }
+.section-astronomer p { -webkit-column-count: 1; -moz-column-count: 1; column-count: 1; }
+.section-astronomer p { 
+    font: 13px/30px 'Roboto Slab', Georgia, serif; 
+    width: 80%; color: #fff; margin: 0 auto 12px auto; 
+    border-bottom: solid 1px rgba(255, 255, 255, .5); 
+    padding-bottom: 30px;
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 40px; /* Firefox */
+    column-gap: 40px;
+    letter-spacing: 0.03em;
+    font-weight: 300;
+}
+
+.section-brain {transition: filter 0.5s ease; z-index: 9; position: relative; background: url(https://img.freepik.com/free-vector/hand-drawn-human-brain_53876-15740.jpg?w=740&t=st=1702232699~exp=1702233299~hmac=bd1ec4f6a591b68513d617dffe6364e97cb22147c971a5605d82b69a6e25029a) no-repeat; background-size: contain; padding: 90px 100px 100px;
+    position: relative;
+    overflow: hidden;
+    background-position: right center;
+    background-color: white;
+    background-attachment: fixed !important;
+    height: 75vh;
+}
+.section-brain .container {
+    width: 550px;
+    margin: initial;
+}
+.section-brain h2 { font: 70px/68px 'quartobold'; color: #730000; margin: 0 0 60px 20px;position: relative;z-index: 1; letter-spacing: 3px; text-transform: lowercase; }
+.section-brain p {font-family: 'Ideal Sans Book';font-size: 18px;line-height: 2;font-weight: 100; }
+.section-brain .caption { margin: 0 0 40px 20px; color: #000; }
+.section-brain .caption a { color: #686868; }
+.section-brain .caption a:hover { background-color: #0cf; }
+.section-brain .container h2 a {
+    color: #a83879;
+}
+.section-brain .author {
+    font-family: quartobold;
+    font-style: italic;
+    color: #686868;
+}
+
+.section-grief-and-his-due { background: #000 url(https://images.unsplash.com/photo-1629197520776-26a23457ec4c?q=80&w=2048&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.section-grief-and-his-due .container { width: 100%; overflow: hidden; padding: 2% 3%; box-sizing: border-box; }
+.section-grief-and-his-due h2 { font: 90px/90px 'First Reign PERSONAL USE ONLY Regular'; color: #fff; text-align: center; letter-spacing: 2px; margin-top: 8%; }
+.section-grief-and-his-due p {font: 20px/30px 'Amiri', serif; color: #fff; text-align: center; letter-spacing: .05em; margin: 60px auto 60px auto; max-width: 600px; font-style: italic;}
+.section-grief-and-his-due .moral { font: 25px/35px 'Cinzel Decorative'; font-weight: 700; filter:alpha(opacity=70); opacity:.7; border-left: 2px solid #fff; border-right: 2px solid #fff; padding: 20px; }
+.section-grief-and-his-due .tear { filter:alpha(opacity=50); opacity:.5; margin: 20px auto 0 auto;}
+.section-grief-and-his-due .caption { margin: 0 0 50px; color: #fff; position: relative;  }
+.section-grief-and-his-due .caption a { color: #fff; }
+.section-grief-and-his-due .caption a:hover { background-color: #002D2D; }
+
+
+@media(max-width: 768px) {
+   .site-wrapper {
+        display: none;
+   }
+   body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Libre Baskerville', 'Times New Roman', Times, serif;
+   }
+   .mobile-view h1 {
+    width: 80%;
+    display: block;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+   }
+}
+
+@media(min-width: 769px) {
+    .mobile-view {
+        display: none;
+    }
+}
