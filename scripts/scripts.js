@@ -26,3 +26,13 @@ window.onpointermove = event => {
     top: `${clientY}px`
   }, { duration: 3000, fill: "forwards" });
 }
+
+const speed = 10;
+
+const moveBackground = () => {
+    let mouseXPos = (event.x / window.innerWidth)*100;
+    let mouseYPos = (event.y / window.innerHeight)*100;
+    document.getElementById('movingtxt').style.backgroundPosition = `${mouseXPos / speed}% ${mouseYPos / speed}%`;
+}
+
+document.getElementById('jamigibbs').addEventListener('mousemove', moveBackground);

@@ -192,14 +192,13 @@ a {text-decoration: none;}
 }
 
 .section-gnat-bull {transition: filter 0.5s ease; z-index: 9; position: relative; background: url(https://img.freepik.com/premium-vector/angry-bull-runs-towards-opposite-direction-hand-drawn-sketch-vector-illustration_666729-762.jpg?w=740) no-repeat; background-size: contain; padding: 90px 0 100px;
-    position: relative;
     overflow: hidden;
     background-position: right;
     background-color: white;
     background-attachment: fixed !important;
 }
 
-.section-gnat-bull:after, .section-prophet:after, .section-brain:after {
+.section-gnat-bull:after, .section-prophet:after, .section-brain:after, .section-bird-bat:after {
     content: "";
     position: absolute;
     top: 0;
@@ -232,14 +231,14 @@ a {text-decoration: none;}
     text-decoration: none;
 } */
 .container-3 {
-    background: url(../images/photo-12.png) no-repeat center center;
+    background: url(https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat center center;
     background-size: cover;
     width: 100%;
     height: 700px;
     padding: 50px 0;
 }
 .container-3 a {
-    color: #000;
+    color: #fff;
 }
 .container-3 h2 {
     font-family: 'salomeregular';
@@ -374,4 +373,49 @@ a {text-decoration: none;}
     .mobile-view {
         display: none;
     }
+}
+
+.section-bird-bat {font: 1.05em/2em 'Muli', sans-serif; height: 100%; position: relative;  z-index: 9; transition: filter 0.5s ease; line-height: 1.5; background-color: #101010; color: #999; color: rgba(255,255,255,0.75); background-image: url(https://img.freepik.com/free-vector/vintage-illustrations-amethyst-woodestar_53876-77378.jpg?t=st=1702294254~exp=1702294854~hmac=b5e2e5c860c2b635c675dc090e198e3dea652906171a3683f1d6b3936d3b42a9); background-size: contain; background-attachment: fixed; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; -webkit-text-rendering: optimizeLegibility; text-rendering: optimizeLegibility; background-position: left; background-color: white;background-repeat: no-repeat;}
+.section-bird-bat .container { width: 100%; overflow: hidden; padding: 40px 180px 140px; box-sizing: border-box; }
+.section-bird-bat .caption { margin-bottom: 40px; margin-left: 0; }
+.section-bird-bat .caption a {color: #78167e; font-size: 18px; font-style: oblique;}
+.section-bird-bat h2 { font: 300 90px/90px 'Philosopher', sans-serif;  font-size: 80px; font-weight: 300; margin-bottom: 10px; color: #000; }
+.section-bird-bat p { font-size: 20px; font-weight: 300; color: #000;}
+.section-bird-bat .col { max-width: 50%; float: right; }
+.section-bird-bat .moral {
+    padding-top: 20px;
+    font-style: oblique;
+    font-family: 'Philosopher';
+    font-size: 23px;
+    color: #78167e;
+}
+
+.section-horse-groom{
+	cursor: pointer; background-size:cover;overflow:hidden;padding:250px 300px 100px; }
+.section-horse-groom h2{ font:60px/75px 'Alfa Slab One', cursive, sans-serif;color:#fff;text-transform:uppercase;letter-spacing:1.25px;text-align:left }
+.section-horse-groom h2 .ampersand{ font:italic 48px 'Gentium Book Basic', serif;text-transform:none; }
+.section-horse-groom p{ font:15px/30px 'Gentium Book Basic', serif;color:#e7e7e7;text-align:justify;width:40%;display:inline-block;float:left;padding:70px 0 0; }
+.section-horse-groom blockquote{ color:#e7e7e7;display:inline-block;font:italic 400 30px/40px "Gentium Book Basic",serif;margin-right:0;text-align:right;width:50%;float:right;padding:80px 0 0; }
+.section-horse-groom .avatar img { margin-bottom: 10px; }
+.section-horse-groom .caption {position: relative; z-index: 3; margin-left: 0; color: #ffffff; }
+.section-horse-groom .caption a { color: #ffffff; -o-transition: 0.2s;-ms-transition: 0.2s;-moz-transition: 0.2s;-webkit-transition: 0.2s;transition: 0.2s;
+    font: 14px/16px 'Unica One', Helvetica, Arial, sans-serif;
+    letter-spacing: .1em;
+    color: #999;
+    text-transform: uppercase;
+    text-decoration: none; }
+.section-horse-groom .caption a:hover { color: #ffffff; background-color: #eb534a; }
+.section-horse-groom h2 {
+    cursor: pointer;
+    font-wight: 900;
+    font-size: 80px;
+    line-height: 1em;
+    text-align: left;
+    text-transform: uppercase;
+    background: url('https://images.unsplash.com/flagged/photo-1579268351234-073f85929562?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: fixed;
+    background-repeat: no-repeat;
+    background-position: 0% 80%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
