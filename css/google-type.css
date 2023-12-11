@@ -54,6 +54,18 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Deutsch Gothic';
+    src: url(fonts/DeutschGothic-RAMA.ttf);
+    /* src: url(fonts/IdealSans-Book.eot?#iefix) format('embedded-opentype'), url(fonts/IdealSans-Book.woff2) format('woff2'), url(fonts/IdealSans-Book.woff) format('woff'), url(fonts/IdealSans-Book.ttf) format('truetype'), url(fonts/IdealSans-Book.svg#IdealSans-Book) format('svg'); */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "initial";
+    src: url('https://fonts.gstatic.com/s/unifrakturmaguntia/v7/7KWy3ymCVR_xfAvvcIXm3wh3zWhftzIdHBsuU0JwdCQ.woff2');
+}
 
 body { 
     margin: 0; 
@@ -418,4 +430,51 @@ a {text-decoration: none;}
     background-position: 0% 80%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.section-crow-raven { background-color: #4e081b; background-image: url(../images/crow.jpg); background-position: right; background-repeat: no-repeat; background-size: 400px; font-size: 85%; padding: 20% 1.25em; background-attachment: fixed; }
+.section-crow-raven .meta { font-size: 100%; margin-bottom: 2em; position: relative; }
+.section-crow-raven .wrapper { margin: 0 auto; max-width: 37.5em; position: relative; }
+.section-crow-raven .caption { color: #aae6d9; display: inline-block; margin: 0 0 0 8px; position: relative; top: -12px; }
+.section-crow-raven .caption a { color: #aae6d9; }
+.section-crow-raven .caption a:hover { background-color: transparent; text-decoration: underline; }
+.section-crow-raven h2 { color: #e5ca9d; font-family: 'Nixie One', 'Times New Roman', Times, serif; font-size: 4.375em; font-weight: 400; line-height: 1.07142857; margin-bottom: 0.5em; }
+.section-crow-raven p { color: #c8cbc1; font-family: 'Libre Baskerville', 'Times New Roman', Times, serif; font-size: 1em; line-height: 1.75; margin-bottom: 1.75em; }
+.section-crow-raven p:last-child { font-size: 1.75em; line-height: 1.5; margin-bottom: 0; text-indent: -0.4em; }
+.section-crow-raven p:last-child:before { content: '\201c'; }
+.section-crow-raven p:last-child:after { content: '\201d'; }
+.section-crow-raven q:before, .section-crow-raven q q:before { content: open-quote; }
+.section-crow-raven q:after, .section-crow-raven q q:after { content: close-quote; }
+.section-crow-raven q { quotes: '\201c' '\201d' '\2018' '\2019'; }
+@media only screen and ( min-width: 33.75em ) {
+	.section-crow-raven { font-size: 100%; }
+}
+@media only screen and ( min-width: 33.75em ) {
+	/* .section-crow-raven { background-size: 740px auto; } */
+	.section-crow-raven p { padding-left: 25%; }
+	.section-crow-raven p:last-child { padding-left: 0; }
+}
+
+.section-dream {
+
+}
+.section-dream { background-color: #041b23; padding: 90px 0 100px;}
+.section-dream h2 { font: 70px/45px 'Deutsch Gothic', sans-serif; color: #ff2000; text-transform: uppercase; margin: 0 0 30px 20px; }
+.section-dream h2 .ampersand { font: italic 32px 'Lora', Georgia, serif; text-transform: none; }
+.section-dream p { font: 20px/45px 'Merriweather', Georgia, serif; max-width: 710px; color: #b2a85e;; margin: 0 0 12px 20px; }
+.section-dream .avatar img { margin: 0 0 10px 20px; }
+.section-dream .caption { margin: 0 0 40px 20px; color: #403E2F; }
+.section-dream .caption a { color: #8a0000;}
+.section-dream .caption a:hover { color: #403e2f; background-color: #b2a85e; }
+.section-dream .ampersand {
+    font-family: "initial";
+    /* float: left; */
+    font-size: 340%;
+    margin-right: 0.05em;
+    color: #602025;
+    text-shadow: 3px 3px 2px #200040;
+}
+.section-dream .flex {
+    display: flex;
+    
 }
