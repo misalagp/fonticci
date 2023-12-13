@@ -7,6 +7,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Federant&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Karma&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lancelot&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap');
 
 :root {
   --black: #111111;
@@ -84,6 +86,20 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'butlerbold';
+    src: url(fonts/butler_bold-webfont.eot);
+    src: url(fonts/butler_bold-webfont.eot?#iefix) format('embedded-opentype'), url(fonts/butler_bold-webfont.woff2) format('woff2'), url(fonts/butler_bold-webfont.woff) format('woff'), url(fonts/butler_bold-webfont.ttf) format('truetype'), url(fonts/butler_bold-webfont.svg#butlerbold) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirLTStd-Book';
+    src: url(fonts/AvenirLTStd-Book.eot?#iefix) format('embedded-opentype'), url(fonts/AvenirLTStd-Book.otf) format('opentype'), url(fonts/AvenirLTStd-Book.woff) format('woff'), url(fonts/AvenirLTStd-Book.ttf) format('truetype'), url(fonts/AvenirLTStd-Book.svg#AvenirLTStd-Book) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 body { 
     margin: 0; 
     padding: 0; 
@@ -266,19 +282,23 @@ hr.hr-1:after {
 .section-gnat-bull .caption a { color: #686868; }
 .section-gnat-bull .caption a:hover { background-color: #0cf; }
 
-/* .section-two-bags { background: #ddd9d1 url(../images/architecture.png) no-repeat center; background-size: cover; height: 100vh; }
-.section-two-bags h2 { font: 80px/66px 'Fugaz One', serif; text-transform: uppercase; color: #817a74; margin: 0 0 30px 20px; opacity: .6; }
-.section-two-bags h2 i { font-family:'Oleo Script', serif; font-style: normal;}
-.section-two-bags p { font: 17px/28px 'Monda', Arial, sans-serif; color: #817a74; width: 380px; margin-left: 250px; }
-.section-two-bags .caption { color: #999; float: left; width: 200px; margin: 4px 0 20px 20px; }
-.section-two-bags .caption a:last-child { margin-left: 0; }
-.section-two-bags .caption a {
-    font: 14px/16px 'Unica One', Helvetica, Arial, sans-serif;
-    letter-spacing: .1em;
-    color: #999;
-    text-transform: uppercase;
-    text-decoration: none;
-} */
+.section-owl {transition: filter 0.5s ease; z-index: 9; position: relative; background: url(https://images.unsplash.com/photo-1575477046051-46d291e62952?q=80&w=1894&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat; background-size: contain; padding: 90px 0 100px;
+    overflow: hidden;
+    background-position: right;
+    background-color: #e5e3d7;
+    background-attachment: fixed !important;
+}
+.section-owl .container {
+    width: 1130px;
+}
+
+.section-owl h2 { font-family: 'butlerbold'; font-size: 70px; color: #4d4639; text-transform: uppercase; margin: 0 0 60px 20px;position: relative;z-index: 1; }
+.section-owl p {font-family: 'AvenirLTStd-Book'; font-size: 20px;line-height: 1.5;font-weight: 100; max-width: 540px; color: #000; margin: 0 0 12px 20px;position: relative;z-index: 1; }
+.section-owl .avatar img { margin: 0 0 10px 20px; }
+.section-owl .caption { margin: 0 0 40px 20px; color: #000; }
+.section-owl .caption a { color: #686868; }
+.section-owl .caption a:hover { background-color: #594732; color:#dcd1bd; }
+
 .container-3 {
     background: url(https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat center center;
     background-size: cover;
@@ -425,13 +445,13 @@ hr.hr-1:after {
     }
 }
 
-.section-bird-bat {font: 1.05em/2em 'Muli', sans-serif; height: 100%; position: relative;  z-index: 9; transition: filter 0.5s ease; line-height: 1.5; background-color: #101010; color: #999; color: rgba(255,255,255,0.75); background-image: url(https://img.freepik.com/free-vector/vintage-illustrations-amethyst-woodestar_53876-77378.jpg?t=st=1702294254~exp=1702294854~hmac=b5e2e5c860c2b635c675dc090e198e3dea652906171a3683f1d6b3936d3b42a9); background-size: contain; background-attachment: fixed; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; -webkit-text-rendering: optimizeLegibility; text-rendering: optimizeLegibility; background-position: left; background-color: white;background-repeat: no-repeat;}
-.section-bird-bat .container { width: 100%; overflow: hidden; padding: 40px 180px 140px; box-sizing: border-box; }
-.section-bird-bat .caption { margin-bottom: 40px; margin-left: 0; }
+.section-bird-bat {font: 1.05em/2em 'Muli', sans-serif; position: relative;  z-index: 9; transition: filter 0.5s ease; line-height: 1.5; background-color: #101010; color: #999; color: rgba(255,255,255,0.75); background-image: url(https://img.freepik.com/free-vector/vintage-illustrations-amethyst-woodestar_53876-77378.jpg?t=st=1702294254~exp=1702294854~hmac=b5e2e5c860c2b635c675dc090e198e3dea652906171a3683f1d6b3936d3b42a9); background-size: contain; background-attachment: fixed; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; -webkit-text-rendering: optimizeLegibility; text-rendering: optimizeLegibility; background-position: left; background-color: white;background-repeat: no-repeat;}
+.section-bird-bat .container {padding: 50px; width: 100%; overflow: hidden; box-sizing: border-box; }
+.section-bird-bat .caption { margin-bottom: 40px; margin-right: 40%; padding-top: 20px; }
 .section-bird-bat .caption a {color: #78167e; font-size: 18px; font-style: oblique;}
 .section-bird-bat h2 { font: 300 90px/90px 'Philosopher', sans-serif;  font-size: 80px; font-weight: 300; margin-bottom: 10px; color: #000; }
 .section-bird-bat p { font-size: 20px; font-weight: 300; color: #000;}
-.section-bird-bat .col { max-width: 50%; float: right; }
+.section-bird-bat .col { max-width: 40%; float: right; padding-right: 50px; }
 .section-bird-bat .moral {
     padding-top: 20px;
     font-style: oblique;
@@ -595,6 +615,15 @@ hr.hr-1:after {
 .section-oak h2 { padding-bottom: 50px; font: 50px/25px 'Astloch', sans-serif; font-weight: 700; uppercase; text-align: center; color: #c31; margin: 20px 20px 30px; }
 .section-oak p { font: 23px/24px 'Vollkorn', serif; color: #333; width: 460px; text-align: center; margin: 0 auto; padding-bottom: 30px;}
 .section-oak .oak-leaf { margin-top: 60px; }
+
+.section-knight { padding: 30px 20px 50px 20px; background: #0d7b97; }
+.section-knight .container { text-align: center; }
+.section-knight .caption { margin-bottom: 0; text-align: left; }
+.section-knight .caption a {font-family: 'Vollkorn'; color: #cbcfef; font-size: 20px; transition: color .3s  ease-in-out;}
+.section-knight .caption a:hover {color: white; background: #c31;}
+.section-knight h2 { padding-bottom: 10px; font: 60px/25px 'Lancelot', sans-serif; font-weight: 700; text-align: center; color: #eeb93c; margin: 20px 20px 30px; }
+.section-knight p { font: 24px/30px 'Lato', serif; color: whitesmoke; width: 700px; text-align: center; margin: 0 auto; padding-bottom: 30px;}
+.section-knight .oak-leaf { margin-top: 60px; }
 
 .section-trees { background: #000 url("../images/land.jpg") no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 .section-trees .container { box-sizing: border-box; overflow: hidden; margin: 0 auto; max-width: 100%; padding: 60px 30px; }
