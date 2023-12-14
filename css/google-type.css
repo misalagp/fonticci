@@ -564,33 +564,6 @@ hr.hr-1:after {
 .section-grief-and-his-due .caption a { color: #fff; }
 .section-grief-and-his-due .caption a:hover { background-color: #002D2D; }
 
-
-@media(max-width: 768px) {
-   .site-wrapper {
-        display: none;
-   }
-   body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: 'Libre Baskerville', 'Times New Roman', Times, serif;
-   }
-   .mobile-view h1 {
-    width: 80%;
-    display: block;
-    color: white;
-    text-align: center;
-    margin: 0 auto;
-   }
-}
-
-@media(min-width: 769px) {
-    .mobile-view {
-        display: none;
-    }
-}
-
 .section-bird-bat {font: 1.05em/2em 'Muli', sans-serif; position: relative;  z-index: 9; transition: filter 0.5s ease; line-height: 1.5; background-color: #101010; color: #999; color: rgba(255,255,255,0.75); background-image: url(https://img.freepik.com/free-vector/vintage-illustrations-amethyst-woodestar_53876-77378.jpg?t=st=1702294254~exp=1702294854~hmac=b5e2e5c860c2b635c675dc090e198e3dea652906171a3683f1d6b3936d3b42a9); background-size: contain; background-attachment: fixed; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; -webkit-text-rendering: optimizeLegibility; text-rendering: optimizeLegibility; background-position: left; background-color: white;background-repeat: no-repeat;}
 .section-bird-bat .container {padding: 50px; width: 100%; overflow: hidden; box-sizing: border-box; }
 .section-bird-bat .caption { margin-bottom: 40px; margin-right: 40%; padding-top: 20px; }
@@ -1333,3 +1306,30 @@ div#accueil h2 {
     margin-bottom: 0;
 	font-size: 2rem;
 }
+
+@media(max-width: 768px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: 'Libre Baskerville', 'Times New Roman', Times, serif;
+    }
+    .site-wrapper {
+        display: none;
+    }
+     
+    .mobile-view h1 {
+        width: 80%;
+        display: block;
+        color: white;
+        text-align: center;
+        margin: 0 auto;
+    }
+ }
+ 
+ @media(min-width: 769px) {
+    .mobile-view {
+        display: none;
+    }
+ }
