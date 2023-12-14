@@ -1,0 +1,15 @@
+{
+  "name": "fonticci",
+  "version": "1.0.0",
+  "description": "1. The page is only available for desktop version. 2. In the process of adding more examples and planning different features like search, share, copy to clipboard etc.",
+  "main": "index.js",
+  "scripts": {
+    "scss:compile": "node-sass game/game.scss -o game/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

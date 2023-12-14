@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <link rel="stylesheet" href="./game.css">
+
+        <title>Let's Play!</title>
+
+        <!-- Google web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    </head>
+
+    <body>
+        <p class="letters">aa bb cc dd ee ff gg hh ii jj kk ll mm nn oo pp qq rr ss tt uu vv ww xx yy zz</p>
+        <section id="sample-text"></section>
+        <main class="container">
+            <div id="progress"></div>
+            <div class="divider"></div>
+            <h3>What's the font?</h3>
+            <div class="selects">
+                <div class="button option"><p></p></div>
+                <div class="button option"><p></p></div>
+                <div class="button option"><p></p></div>
+                <div class="button option"><p></p></div>
+            </div>
+        </main>
+
+        <section class="full-screen-overlay popup" id="welcome-popup">
+            <h1>Typophile</h1>
+            <div class="container">
+                <h2>How well do you know your fonts?</h2>
+                <h4>Typophile will find common fonts installed on your device.<br>All you have to do is <em>guess the font.</em></h4>
+                <div class="check">
+                <span class="mono">Include top Google fonts?</span>
+                <input type="checkbox" value="None" id="check" name="check" checked />
+                <label for="check"></label>
+                </div>
+                <div class="button" id="start-game"><p class="mono">Play!</p></div>
+            </div>
+        </section>
+
+        <section class="full-screen-overlay popup" id="gameover-popup"></section>
+
+        <section class="full-screen-overlay run-animation" id="hurrah">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-127 129 256 256" style="enable-background:new -127 129 256 256;" xml:space="preserve">
+                    <polygon class="svgpath" id="tick" points="-52,307.1 -100.4,258.7 -127,285.3 -63.1,349.2 -63,349.1 -51.4,360.8 129,180.4 101.9,153.2 	"/>
+            </svg>
+
+            <h1 class="font-prompt">Font</h1>
+        </section>
+
+        <section class="full-screen-overlay run-animation" id="boohoo">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-127 129 256 256" style="enable-background:new -127 129 256 256;" xml:space="preserve">
+                <polygon class="svgpath" id="cross" points="120.6,171.6 93.5,144.5 0.6,231.7 -88,144.5 -114.6,171.1 -26.7,258.3 -114.6,345.4 -88,372 0.6,284.8 93.5,372 
+                120.6,344.9 29.9,258.3 "/>
+            </svg>
+
+            <h1 class="font-prompt">Font</h1>
+        </section>
+
+
+
+
+        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/380275/font-detector.js"></script>
+        <script src="./game.js"></script>
+    </body>
+</html>

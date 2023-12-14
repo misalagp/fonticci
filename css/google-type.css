@@ -9,23 +9,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lancelot&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Display:wght@400;500&display=swap');
+
+
 
 :root {
-  --black: #111111;
-  --white: #fdfdfd;
-  --blueish: #add8e6;
-  --green: #22cc88;
-  --blue: #0055ff;
-  --purple: #8855ff;
-  --purpleSh: #b666d2;
-  --red: #ff0055;
-  --orange: #ee4444;
-  --yellow: #ffcc00;
-  --mustard: #ffaa00;
-  --pink: #ffc1cc;
-  --lili: #b19cd9;
-  --lila: #AE04CC;
+    --black: #111111;
+    --white: #fdfdfd;
+    --blueish: #add8e6;
+    --green: #22cc88;
+    --blue: #0055ff;
+    --purple: #8855ff;
+    --purpleSh: #b666d2;
+    --red: #ff0055;
+    --orange: #ee4444;
+    --yellow: #ffcc00;
+    --mustard: #ffaa00;
+    --pink: #ffc1cc;
+    --lili: #b19cd9;
+    --lila: #AE04CC;
+
+    --font-display: 'Big Shoulders Inline Display', 'Arial Narrow', sans-serif;
+    --font-body: 'Work Sans', sans-serif;
+    --font-mono: 'Space Mono', monospace;
 }
+
 @font-face {
     font-family: 'salomeregular';
     src: url(fonts/salome-webfont-webfont.eot);
@@ -181,6 +189,143 @@ hr.hr-1:after {
     z-index: 2;
     backdrop-filter: blur(12vmax);
 }
+
+#header {
+    text-align: right;
+    position: absolute;
+    top: -75px;
+    right: 0;
+}
+
+#header .button {
+    position: relative;
+    display: inline-flex;
+    height: 3.5rem;
+    align-items: center;
+    border-radius: 9999px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-family: Matter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: -.06em;
+}
+#header .button-bg {
+    overflow: hidden;
+    border-radius: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+  transition: transform 1.8s cubic-bezier(.19,1,.22,1);
+}
+
+#header .button-yellow {
+    background-color: transparent;
+    color: #1d1d1f;
+}
+
+.button-bg, .button-bg-layer, .button-bg-layers {
+    display: block;
+}
+
+.button-yellow .button-bg {
+    --tw-border-opacity: 1;
+    border-color: rgba(255,208,116,var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+  background-color: rgba(255,208,116,var(--tw-bg-opacity));
+}
+
+.button-bg-layers {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: -60%;
+    aspect-ratio: 1 / 1;
+    width: max(200%,10rem);
+}
+
+.button-bg-layer {
+    border-radius: 9999px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+}
+
+.button-bg-layer.-purple {
+    --tw-bg-opacity: 1;
+    background-color: rgba(163,116,255,var(--tw-bg-opacity));
+}
+
+
+.button-bg-layer.-turquoise {
+    --tw-bg-opacity: 1;
+    background-color: rgba(23,241,209,var(--tw-bg-opacity));
+}
+
+.button-bg-layer.-yellow {
+    --tw-bg-opacity: 1;
+    background-color: rgba(255,208,116,var(--tw-bg-opacity));
+}
+
+.button-inner {
+    position: relative;
+}
+
+.button-inner-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateY(70%);
+}
+
+.button:hover .button-bg {
+    transform: scale(1);
+}
+
+.button:hover .button-bg-layer, .button-round:hover .button-bg-layer {
+    transition: transform 1.3s cubic-bezier(.19,1,.22,1),opacity .3s linear;
+  }
+
+.button:hover .button-bg-layer-1, .button-round:hover .button-bg-layer-1 {
+   transform: scale(1.1);
+}
+
+.button:hover .button-bg-layer-2, .button-round:hover .button-bg-layer-2 {
+    transition-delay: .1s;
+    transform: scale(.95);
+  }
+
+
+.button:hover .button-bg-layer, .button-round:hover .button-bg-layer {
+    transition: transform 1.3s cubic-bezier(.19,1,.22,1),opacity .3s linear;
+  }
+
+.button:hover .button-bg-layer-3, .button-round:hover .button-bg-layer-3 {
+  transition-delay: .2s;
+  transform: scale(1);
+}
+
+.button:hover .button-inner-static {
+    color: black;
+    opacity: 0;
+    transform: translateY(-70%);
+    transition: transform 1.4s cubic-bezier(.19,1,.22,1),opacity .3s linear;
+  }
+
+
+.button:hover .button-inner-hover {
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 1.4s cubic-bezier(.19,1,.22,1),opacity 1.4s cubic-bezier(.19,1,.22,1);
+}
+
 .container { width: 960px; margin: 0 auto; }
 
 .container.intro {
@@ -188,6 +333,7 @@ hr.hr-1:after {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* padding-top: 30px; */
 }
 
 .intro-wrapper {
@@ -1065,4 +1211,125 @@ div#accueil h2 {
 
 #app h1, #app h2 {
     font-family: 'Berkshire Swash', serif;
+}
+
+#starry-night {
+    position: relative;
+	background: rgb(9,17,27);
+	background: -moz-linear-gradient(180deg, rgba(9,17,27,1) 0%, rgba(9,41,75,1) 100%);
+	background: -webkit-linear-gradient(180deg, rgba(9,17,27,1) 0%, rgba(9,41,75,1) 100%);
+	background: linear-gradient(180deg, rgba(9,17,27,1) 0%, rgba(9,41,75,1) 100%);
+	padding-bottom: 3vh;
+    color: whitesmoke;
+    font-family: 'Big Shoulders Inline Display', sans-serif;
+    height: 100vh;
+}
+
+.intro-particles {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+@keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 0;}
+}
+
+.intro-clouds {
+  background-image: url('https://user-images.githubusercontent.com/623568/141994203-dd7fb42a-b8b2-45f2-b578-fb6bf5ebdb13.png');
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+  animation: move-clouds-back 400s linear infinite;
+	pointer-events: none;
+	opacity: 0.7;
+}
+
+.intro-background {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: -2px;
+	left: 0;
+	z-index: 1;
+	/* you can totally url escape an svg and just shove it in there */
+	background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22mountains%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220%22%20y%3D%220%22%20viewBox%3D%220%200%201920%20160%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20d%3D%22M-3.108%2075.52s5.953.369%207.628-.369%202.419-2.955%204.093-3.14c12.497-3.083%2013.075%204.477%2032.93%204.064%2033.754-3.345%2056.346-5.615%2087.999-4.618%204.466.554%2023.07%206.65%2035.722%205.172%2030.526-2.341%2050.643-4.247%2075.535-8.868%2016.827-.585%2033.146-4.835%2047.441-9.79%2010.703-6.571%2022.517-1.174%2036.466-6.093%207.256-3.326%205.953-6.097%208.186-7.39%202.233-1.293%2012.279-7.204%2015.07-9.051%202.791-1.847%203.163-3.51%205.581-4.064%202.419-.554%207.256-.739%208.744-1.108%201.488-.369%204.279-.924%205.581-.185%201.302.739%203.721%202.217%205.023%201.478%201.302-.739%2010.605-1.108%2013.767-.554s11.163%204.248%2012.465%205.541c1.302%201.293%201.488%203.51%205.395%201.847%207.676-4.078%2010.665%201.216%2016.372-1.477%202.232-1.109%2011.907-6.466%2021.767-.555%2013.236%207.076%203.027%2018.751%208.371%2018.103%205.003-.225%2010.482%208.631%209.116%2013.115%203.387%204.051%202.947%2012.288%207.071%2016.254%207.868%206.976%2030.577%204.986%2039.07%204.247%2010.016-1.929%2014.047-3.143%2023.999%201.48%202.047-.001%204.465%204.616%207.442%205.171%2014.85%203.538%2049.354%206.293%2065.116-.187%207.831-4.258%2016.986-7.12%2024.559-5.908%2011.432-1.47%2026.875-3.748%2038.511-1.294%202.233.924%209.116%206.096%2010.791%206.096%201.674%200%206.326.554%207.814%201.662%204.699%202.918%2013.811.864%2018.791%202.402%209.7%201.525%2028.655-1.508%2039.255-3.88%208.845-2.73%2019.438-7.176%2027.535-5.54%201.488.368%202.791%203.324%204.279%203.693%202.842.319%2016.435-3.654%2019.535-.739%202.047-1.108%205.953-.554%2010.791-1.108%207.416-.899%208.939%202.496%2013.209%202.032.558-.185%205.023.554%208.372.184%207.215-.018%209.748%201.953%2016.395%202.908%202.093.624%204.884%204.365%205.233%204.573.349.208%204.953%202.009%205.651%202.217.698.208%202.651%203.463%203.698%203.671s22.884-.485%2024.558.346%202.581%203.256%202.791%203.602c.209.346%202.512-2.009%202.791-1.593.279.416%202.721%204.087%203.628%204.641.907.554%2011.721%205.126%2014.14%204.572%202.419-.554%203.535-2.586%205.581-2.401%205.05.818%207.744%206.863%2013.953%207.573%203.349.37%2019.535-.738%2022.698-1.293%2012.068-2.008%2018.787%204.434%2034.419.185%208.558-2.956%2018.419-6.096%2024.186-6.281%205.767-.185%2021.767-5.541%2024.93-5.911%203.163-.369%2022.511-4.248%2026.977-5.726%2020.286-5.891%2041.669-7.208%2061.209-12.561%206.822-2.113%2012.283-1.82%2018.605-5.541%202.046-1.848%208.93-7.205%2015.628-9.791s50.604-16.994%2055.256-17.917c10.898-2.797%2027.696-7.306%2034.232-14.223%203.019-1.596%2012.851-3.281%2016.186-5.726%205.938-1.793%2030.47-5.792%2037.023-7.758%203.163-.923%208.373-4.802%2010.605-5.726%204.92-1.676%2015.208-2.009%2019.349-5.358%2010.548-7.193%2032-5.82%2043.349-1.845%203.901%201.043%206.872%201.262%208.186%203.323%205.7-1.419%2010.114-6.724%2018.604-3.51%205.21%202.217%2022.698%2011.638%2028.652%2013.485%2018.776%205.62%2039.38%2012.928%2055.814%2018.103%207.598-1.211%2014.62%204.425%2021.767%207.019%202.791.738%2010.977%204.802%2013.768%205.91%2014.318%205.476%2036.12%208.877%2051.349%2011.269%206.864%202.868%2023.079%208.265%2028.838%2012.558%202.875%206.574%2015.431%206.251%2020.279%205.911%2011.724.353.579-6.339%208.372-15.7%201.488-1.293%2010.232-2.217%2011.72-3.879%207.219-11.265%2010.136-14.74%2021.21-21.241%205.776-5.406%2012.701-12.844%2023.812-16.072%206.885-.922%209.489.74%2010.791.371%201.302-.369%203.349-3.14%207.628-4.064%204.279-.924%207.628-1.478%209.488-3.51%207.771-8.374%2019.117-15.58%2032.557-18.288%2024.696-.292%2045.729-1.015%2068.838.739%2019.437%201.785%2060.493%204.03%2079.069%207.206%202.791.184%206.326-3.511%2010.233-3.695%203.907-.185%2020.651.924%2020.651.924v145.272H0L-3.108%2075.52z%22%20fill%3D%22%2318171a%22%2F%3E%3C%2Fsvg%3E');
+	background-position: bottom center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	pointer-events: none;
+}
+
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 8vh;
+    padding-bottom: 8vh;
+    position: relative;
+    z-index: 2;
+    pointer-events: none;
+}
+
+#starry-night .caption a {
+    color: white; font-size: 20px; transition: all .3s  ease-in-out; font-family: 'Vollkorn';
+}
+#starry-night .intro-container .caption a:hover {color: black; background: white;}
+
+.intro-inner {
+	max-width: 650px;
+	margin: 0 auto;
+}
+
+.intro-title {
+    font-size: 140px;
+	margin: 0 0 4vh 0;
+	line-height: 1.125;
+	text-align: center;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    font-optical-sizing: auto;
+    opacity: 1;
+}
+
+.intro-subhead {
+    margin: 0;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 28px;
+    color: white;
+    font-weight: 100;
+}
+  
+.intro-social {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    margin-top: 2rem;
+}
+
+.intro-social-link {
+	display: block;
+	line-height: 1.5;
+}
+
+.intro-accent {
+    position: absolute;
+	top: 20vh;
+	right: 15vw;
+	width: 100px;
+	height: 100px;
+	background-color: darkblue;
+}
+
+.subhead {
+    margin-bottom: 0;
+	font-size: 2rem;
 }

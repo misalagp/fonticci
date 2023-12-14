@@ -1,0 +1,304 @@
+html {
+  min-height: 100%;
+  font-size: 18px;
+  background: #F45B69;
+  background: linear-gradient(122deg, transparent, #52489C), linear-gradient(32deg, #F45B69, #59C3C3);
+  transition: background 0.2s; }
+
+body {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  min-height: 100%; }
+
+h1 {
+  font-size: calc(2rem + 4vw);
+  position: relative; }
+  h1:after {
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    height: 20%;
+    background: #F45B69;
+    z-index: -1;
+    opacity: 0.9; }
+
+h3 {
+  letter-spacing: 2px; }
+
+h4 {
+  font-size: 1.35rem;
+  font-weight: normal; }
+
+h1, h2, h3, h4, p, span, label {
+  color: #EBEBEB;
+  text-align: center; }
+
+a {
+  text-decoration: none; }
+
+.container {
+  width: 95%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 0; }
+
+.mono {
+  font-family: monospace; }
+
+#progress {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px; }
+
+.marker {
+  box-sizing: border-box;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #f67883;
+  border-radius: 50%;
+  transition: background 0.3s, width 0.3s;
+  background: #EBEBEB; }
+  .marker.done {
+    box-sizing: initial;
+    border: 0;
+    box-shadow: 0 0 10px #f24353, 0 0 0 2px #EBEBEB; }
+  .marker.false {
+    background: red; }
+  .marker.true {
+    background: lightgreen; }
+  .marker.current {
+    background: #EBEBEB;
+    width: 20px;
+    height: 20px;
+    box-sizing: initial;
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.2); }
+
+.divider {
+  border-top: 2px solid #EBEBEB;
+  height: 0;
+  width: 100%; }
+
+p.letters {
+  font-size: 0.8rem;
+  box-sizing: border-box;
+  width: 100%;
+  height: 1.4rem;
+  line-height: 1.4;
+  text-align: justify;
+  position: absolute;
+  margin: 0;
+  padding: 0.2em 1em 0 1em;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-transform: capitalize;
+  color: rgba(0, 0, 0, 0.74);
+  background: rgba(255, 255, 255, 0.8); }
+  p.letters:after {
+    /* Justify text when 1 line */
+    content: '';
+    font-size: 0;
+    line-height: 0;
+    height: 0;
+    display: inline-block;
+    width: 100%; }
+
+#sample-text {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 3rem 1rem 1rem 1rem;
+  font-family: inherit;
+  font-size: calc(4rem + 4vw); }
+
+#sample-text p {
+  font-weight: normal;
+  font-style: normal;
+  margin: 0;
+  padding: 0; }
+
+.selects {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+  flex-wrap: wrap; }
+
+.button {
+  width: 150px;
+  height: 60px;
+  font-family: inherit;
+  margin: 5px;
+  padding: 5px;
+  display: table;
+  cursor: pointer;
+  border-radius: 6px;
+  opacity: 0.8;
+  background: #f56572;
+  border: 1px solid #f12b3d;
+  box-shadow: 0px 2px 0 #f12b3d, 2px 4px 1px #f24353, 0px 0px 25px rgba(0, 0, 0, 0.1);
+  letter-spacing: 1px;
+  transition: all 0.1s; }
+  .button:hover {
+    background: #f67883;
+    box-shadow: 2px 4px 3px #f12b3d, 4px 4px 18px #f24353; }
+  .button:active {
+    background: #f24353;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2); }
+
+.button.secondary {
+  opacity: 0.9;
+  border: 0 0 rgba(0, 0, 0, 0);
+  background: #333;
+  border: 1px solid #000;
+  box-shadow: 0px 2px 0 #111, 2px 4px 1px #000, 0px 0px 25px rgba(0, 0, 0, 0.1); }
+  .button.secondary:hover {
+    background: #444;
+    box-shadow: 2px 4px 3px #111,  4px 4px 18px #000; }
+  .button.secondary:active {
+    background: #111;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2); }
+
+.button p {
+  padding: 0;
+  margin: 0;
+  display: table-cell;
+  vertical-align: middle; }
+
+#start-game {
+  margin: 1rem auto; }
+
+.full-screen-overlay {
+  overflow: hidden;
+  opacity: 0;
+  height: 0;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: opacity 0.3s;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around; }
+
+.popup {
+  font-family: Lora, 'Times New Roman', serif;
+  background: linear-gradient(122deg, transparent, #52489C), linear-gradient(32deg, #F45B69, #59C3C3);
+  justify-content: flex-start; }
+
+.font-list {
+  width: 90%;
+  max-width: 280px;
+  margin: 16px auto;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 4px; }
+  .font-list p {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3); }
+    .font-list p:after {
+      z-index: -1;
+      content: '';
+      position: absolute;
+      bottom: 10%;
+      left: 0;
+      right: 0;
+      height: 25%;
+      opacity: 0.7; }
+    .font-list p.correct:after {
+      background: lightgreen; }
+    .font-list p.incorrect:after {
+      background: red; }
+
+#welcome-popup {
+  height: 100%;
+  opacity: 1;
+  overflow-y: scroll; }
+
+#gameover-popup h1 {
+  margin-bottom: 0; }
+
+.font-prompt {
+  color: #FFF;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.3); }
+
+/* Tick / cross */
+#tick {
+  stroke: #91DC5A; }
+
+#cross {
+  stroke: #D80027; }
+
+.full-screen-overlay svg {
+  width: 400px;
+  height: 400px; }
+
+.svgpath {
+  fill: rgba(0, 0, 0, 0);
+  stroke-width: 16px;
+  stroke-dasharray: 2000;
+  stroke-linecap: round;
+  z-index: 2; }
+
+.run-animation .svgpath {
+  animation: dash-animation 1.2s reverse linear forwards; }
+
+@keyframes dash-animation {
+  to {
+    stroke-dashoffset: 2000; } }
+
+/* 
+    Checkbox styling by
+    https://codepen.io/bbodine1/pen/novBm */
+.check {
+  width: 200px;
+  position: relative;
+  margin: 25px auto;
+  padding: 16px;
+  padding-right: 50px;
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 4px; }
+  .check label {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -12px;
+    right: 16px;
+    background: linear-gradient(top, #222 0%, #45484d 100%);
+    border-radius: 50%;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.4); }
+    .check label:after {
+      content: '';
+      width: 9px;
+      height: 5px;
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      border: 3px solid #fcfff4;
+      border-top: none;
+      border-right: none;
+      background: transparent;
+      opacity: 0;
+      transform: rotate(-45deg); }
+    .check label:hover::after {
+      opacity: 0.3; }
+  .check span {
+    margin-right: 30px; }
+  .check input[type=checkbox] {
+    visibility: hidden; }
+    .check input[type=checkbox]:checked + label:after {
+      opacity: 1; }
